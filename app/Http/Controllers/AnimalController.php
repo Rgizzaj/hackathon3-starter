@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Owner;
+use App\Models\Animal;
 
 class AnimalController extends Controller
 {
@@ -40,7 +41,17 @@ class AnimalController extends Controller
 
     }
 
-    public function detail($id)
+    public function index()
+    {
+        $animalList = Animal::with('owner', 'image')
+
+            ->limit(50)
+            ->get();
+
+        return view('animals.index', compact('animalList'));
+    }
+
+    public function detailOwner($id)
     {
         $owner = Owner::findOrFail($id);
         return view('owners.detail', compact('owner'));
@@ -88,6 +99,16 @@ class AnimalController extends Controller
         return redirect()->route('owners.create');
     }
 
+    public function detail($id) 
+    {
+        $detail = Animal::where('id', $id)
+                    ->first();
+                return view('animals.detail', compact('detail'));
+    
+    }       
 
 }
+
+    
+
 

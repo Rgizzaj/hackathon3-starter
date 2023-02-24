@@ -9,5 +9,15 @@ class Animal extends Model
 {
     use HasFactory;
 
-    
+    protected $table = 'animals';
+
+    public function owner()
+    {
+        return $this->belongsTo(Owner::class);
+    }
+
+    public function image()
+    {
+        return $this->belongsTo(Image::class);
+    }
 }
