@@ -12,31 +12,27 @@ return new class extends Migration
     public function up()
 
     {
-    
-        Schema::create('owners', function (Blueprint $table) { 
-            $table->bigIncrements('id');                        
-            $table->string('first_name');                           
-            $table->string('surname');                
-            $table->string('email');                       
-            $table->string('phone');                           
-            $table->string('address');              
-            $table->timestamps();                             
-    
+
+        Schema::create('owners', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('first_name')->nullable();
+            $table->string('surname')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->text('address')->nullable();
+            $table->timestamps();
         });
-    
     }
-    
-         
+
+
     public function down()
-    
+
     {
-    
-        Schema::dropIfExists('owners'); 
-    
+
+        Schema::dropIfExists('owners');
     }
 
     /**
      * Reverse the migrations.
      */
 };
-
