@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FEFBE9;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+}
+
+.index {
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+
+}
+
+.owner {
+    margin: 30px;
+}
