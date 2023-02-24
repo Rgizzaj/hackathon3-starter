@@ -7,8 +7,8 @@
 
         <div class="index">
 
-                <div class="owner">{{$animal->owner->first_name}}`s:    
-                    <a href="{{route('animals.detail', ['id'=> $animal->id])}}">{{$animal->name}}</a>  
+                <div class="owner">{{$animal->owner->first_name}}`s    
+                    <a href="{{route('animals.detail', ['id'=> $animal->id])}}">{{$animal->name}}</a>:
                 </div>
 
                 <div class="image">
