@@ -1,12 +1,15 @@
-      @include('common.htmlUpper')
+@include('common.htmlUpper')
+
+<h2>Pet Detail: </h2>
+
       <div class="pet-details">
-            <h1>Pet Details: </h1>
                 <div class="details">
-                  Name:  {{$detail->name }} <br>
-                  Species:  {{$detail->species}}<br>
-                  Breed:  {{$detail->breed }}<br>
-                  Age:  {{$detail->age }}<br>
-                  Weight:  {{$detail->weight }}
+                  <span>Name: {{$detail->name }} <br></span> 
+                  <span>Species:  {{$detail->species}}<br></span>
+                  <span>Breed:  {{$detail->breed }}<br></span>
+                  <span>Age:  {{$detail->age }}<br></span>
+                  <span>Weight:  {{$detail->weight }}</span>
                 </div>
       </div>
+
 @include('common.htmlBottom')
